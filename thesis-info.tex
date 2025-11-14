@@ -1,0 +1,74 @@
+
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\pagenumbering{gobble}
+
+
+\usepackage{graphicx}
+\usepackage{eso-pic}
+
+\AddToShipoutPictureBG{%
+  \AtPageUpperLeft{%
+    \raisebox{-30mm}{%
+      \hspace*{0mm}%
+      \includegraphics[width=35mm]{cp_logo_faint.png}%
+    }%
+  }%
+}
+
+
+
+\AddToShipoutPictureBG{%
+  \AtPageLowerLeft{%
+    \raisebox{5mm}{% move up
+      \hspace*{\dimexpr\paperwidth-40mm\relax}% move to right edge
+      \includegraphics[width=35mm]{dots.png}%
+    }%
+  }%
+}
+
+
+
+\begin{titlepage}
+\thispagestyle{empty}
+
+% centre logo and title
+\vspace*{0.25\textheight}
+\begin{center}
+    \includegraphics[width=0.25\textwidth]{corepower_logo.png}\\[1.5em]
+    {\LARGE MCFR Fuel Report}
+\end{center}
+
+\vfill
+
+% bottom section with author boxes and dotted design
+\noindent
+\noindent
+\begin{minipage}{0.5\textwidth}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{p{0.9\textwidth}}
+        \textcolor{black}{Author: Louis Aylwin}\\[0.2em]
+        \textcolor{black}{Position: Analyst Intern}\\[0.2em]
+        \textcolor{black}{Date: 14/11/2025}
+    \end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+    \begin{flushright}
+        \begin{tikzpicture}[scale=0.18]
+            \foreach \x in {0,...,3}{
+                \foreach \y in {0,...,3}{
+                    \fill[cyan!40] (\x*0.8,\y*0.8) circle (0.07);
+                }
+            }
+        \end{tikzpicture}
+    \end{flushright}
+\end{minipage}
+
+
+
+
